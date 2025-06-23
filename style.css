@@ -2,7 +2,7 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-   background-image: url('https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=1470&q=80');
+   background-image: url(img/IMG\ central.avif);
    background-size: cover;
   background-position: center;
   color: white;
@@ -34,6 +34,7 @@ header {
   flex-wrap: wrap;
 }
 
+
 header h1 {
   font-size: 1.8em;
 }
@@ -64,29 +65,31 @@ nav li {
 
 .productos {
   display: flex;
-  justify-content: space-around;
-  gap: 1em;
-  flex-wrap: wrap;
+  flex-direction: column; /* Pone las tarjetas una debajo de otra */
+  align-items: left;
+  gap: 1.5em;
 }
 
 .producto {
   background-color: #ffeedd;
   border-radius: 10px;
   padding: 1em;
-  width: 30%;
+  width: 80%; /* Más angosto que antes */
+  max-width: 400px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
   transition: transform 0.3s ease;
 }
 
 .producto:hover {
-  transform: scale(1.05);
+  transform: scale(1.02);
 }
 
 .producto img {
   width: 100%;
+  max-height: 200px;
+  object-fit: cover;
   border-radius: 8px;
 }
-
 /* ----- Footer ----- */
 footer {
   background-color: #f4e1d2;
